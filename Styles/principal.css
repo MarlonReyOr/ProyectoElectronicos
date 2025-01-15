@@ -1,0 +1,21 @@
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            background: #ddd;
+            padding: 10px;
+        }
+        .menu a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border: 1px solid black;
+            background: #fff;
+        }
+        .menu a.active {
+            background: green;
+            color: white;
+        }
+        .content {
+            padding: 20px;
+        }
