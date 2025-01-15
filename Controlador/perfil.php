@@ -70,5 +70,5 @@ function cargarSeccionPerfil($conn) {
 }
 
 cargarSeccionPerfil($conn);
-$conn->close();
+
 ?>
