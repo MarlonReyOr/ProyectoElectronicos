@@ -1,6 +1,5 @@
 <?php
 session_start(); // Iniciar sesión para gestionar al usuario
-
 require_once "Conexion/conn.php";
 require_once "Controlador/controlador_principal.php";
 ?>
