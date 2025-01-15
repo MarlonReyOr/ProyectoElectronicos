@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 if (!isset($_SESSION['id_usuario'])) {
     header('Location: index.php?seccion=iniciar_sesion');
     exit();
@@ -24,13 +26,13 @@ if (!isset($_SESSION['id_usuario'])) {
 
     switch ($subseccion) {
         case 'solicitudes':
-            include('Vista/perfil_solicitudes.php');
+            include('perfil_solicitudes.php');
             break;
         case 'donaciones':
-            include('Vista/perfil_donaciones.php');
+            include('perfil_donaciones.php');
             break;
         case 'informacion':
-            include('Vista/perfil_informacion.php');
+            include('perfil_informacion.php');
             break;
         default:
             echo "<p>Subsección no encontrada.</p>";
