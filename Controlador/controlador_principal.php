@@ -1,4 +1,8 @@
 <?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 function cargarSeccion() {
     $seccion = $_GET['seccion'] ?? 'donativos'; // Sección por defecto
 
@@ -12,6 +16,9 @@ function cargarSeccion() {
             } else {
                 header('Location: index.php?seccion=iniciar_sesion'); // Redirige si no está logueado
             }
+            break;
+        case 'registrarse':
+            include('Vista/registrarse.php');
             break;
         case 'donativos':
             include('Vista/donativos.php');
