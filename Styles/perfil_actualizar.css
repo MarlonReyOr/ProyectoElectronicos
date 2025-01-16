@@ -1,0 +1,81 @@
+/* Colores */
+:root {
+    --verde: #2ECC71;
+    --azul: #3498DB;
+    --blanco: #FFFFFF;
+    --gris-claro: #ECF0F1;
+    --verde-oscuro: #306B34;
+    --amarillo: #EFB810;
+    --negro: #000000;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--negro);
+    margin-top: 20px;
+}
+
+form {
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--negro);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--azul);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--verde-oscuro);
+    border: none;
+    border-radius: 5px;
+    color: var(--blanco);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--verde);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

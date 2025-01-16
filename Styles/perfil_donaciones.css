@@ -1,0 +1,75 @@
+/* Colores */
+:root {
+    --verde: #2ECC71;
+    --blanco: #FFFFFF;
+    --gris-claro: #ECF0F1;
+    --verde-oscuro: #306B34;
+    --amarillo: #EFB810;
+    --negro: #000000;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--negro);
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+strong {
+    color: var(--negro);
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid var(--verde);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--verde);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    textarea {
+        width: 95%;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

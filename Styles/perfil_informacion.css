@@ -1,0 +1,69 @@
+/* Colores */
+:root {
+    --verde: #2ECC71;
+    --azul: #3498DB;
+    --blanco: #FFFFFF;
+    --gris-claro: #ECF0F1;
+    --verde-oscuro: #306B34;
+    --amarillo: #EFB810;
+    --negro: #000000;
+    --rojo: #9c0b0b;
+    --rojo2: #ca0a0a;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: var(--negro);
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+}
+
+strong {
+    color: var(--negro);
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--rojo);
+    color: var(--negro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--rojo2);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

@@ -1,21 +1,75 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: #ECF0F1;
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna para la barra y el contenido */
+    grid-template-rows: auto 1fr; /* Ajusta las filas para la barra y el contenido */
+    min-height: 100vh;
+}
 
-        .menu {
-            display: flex;
-            justify-content: space-around;
-            background: #ddd;
-            padding: 10px;
-        }
-        .menu a {
-            padding: 10px;
-            text-decoration: none;
-            color: black;
-            border: 1px solid black;
-            background: #fff;
-        }
-        .menu a.active {
-            background: green;
-            color: white;
-        }
-        .content {
-            padding: 20px;
-        }
+/* Estilo de la barra de navegación */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ECF0F1;
+    padding: 10px 0;
+}
+
+.menu a {
+    flex: 1; /* Distribuye los enlaces equitativamente */
+    text-align: center;
+    padding: 10px 0;
+    color: #000000;
+    text-decoration: none;
+    border-right: 1px solid #FFFFFF;
+}
+
+/* Eliminar el borde del último elemento */
+.menu a:last-child {
+    border-right: none;
+}
+
+/* Estilo cuando el enlace está activo */
+.menu a.active {
+    background-color: #306B34;
+}
+
+/* Estilo responsive para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        border-bottom: 1px solid #FFFFFF;
+        border-right: none;
+    }
+
+    .menu a:last-child {
+        border-bottom: none;
+    }
+
+    .content {
+        padding-top: 5%;
+    }
+}
+
+/* Estilo para computadoras */
+@media (min-width: 769px) {
+    .menu a {
+        border-right: 1px solid #FFFFFF;
+    }
+}
+
+/* Colores utilizados:
+#2ECC71 (Verde)
+#3498DB (Azul)
+#FFFFFF (Blanco)
+#ECF0F1 (Gris claro)
+#306B34 (Verde oscuro)
+#EFB810 (Amarillo)

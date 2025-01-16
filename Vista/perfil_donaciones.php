@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mis Donaciones</title>
+    <link rel="stylesheet" href="./Styles/perfil_donaciones.css">
 </head>
 <body>
     <h1>Mis Donaciones</h1>
@@ -16,10 +17,11 @@
     $id_donante = $_SESSION['id_usuario'];
 
     // Consulta SQL para obtener los mensajes
-    $sql = "SELECT m.id_solicitud, m.mensaje, m.fecha_mensaje, u.nombre 
+    $sql = "SELECT m.id_solicitud, m.mensaje, m.fecha_mensaje, u.nombre, t.nombre AS tipo_dispositivo
             FROM mensaje m
             JOIN solicitud s ON m.id_solicitud = s.id_solicitud
             JOIN usuario u ON s.id_usuario = u.id_usuario
+            JOIN tipo_dispositivo t ON s.id_tipo_dispositivo = t.id_tipo
             WHERE m.id_donante = ? 
             AND s.finalizado = 0
             ORDER BY m.id_solicitud, m.fecha_mensaje ASC";
@@ -40,7 +42,8 @@
     // Mostrar los mensajes agrupados por id_solicitud
     foreach ($chats as $id_solicitud => $mensajes) {
         $nombre_usuario = $mensajes[0]['nombre'];
-        echo "<h2>Conversación con: $nombre_usuario</h2>";
+        $tipo_dispositivo = $mensajes[0]['tipo_dispositivo'];
+        echo "<h2>Conversación con: $nombre_usuario (Solicitando: $tipo_dispositivo)</h2>";
         foreach ($mensajes as $mensaje) {
             echo "<p><strong>{$mensaje['fecha_mensaje']}:</strong> {$mensaje['mensaje']}</p>";
         }

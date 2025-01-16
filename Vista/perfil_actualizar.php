@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Actualizar Perfil</title>
+    <link rel="stylesheet" href="./Styles/perfil_actualizar.css">
 </head>
 <body>
     <h1>Actualizar Perfil</h1>

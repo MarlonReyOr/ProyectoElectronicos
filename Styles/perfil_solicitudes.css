@@ -1,0 +1,65 @@
+/* Colores */
+:root {
+    --verde: #2ECC71;
+    --azul: #3498DB;
+    --blanco: #FFFFFF;
+    --gris-claro: #ECF0F1;
+    --verde-oscuro: #306B34;
+    --amarillo: #EFB810;
+    --negro: #000000;
+}
+
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--gris-claro);
+    color: var(--negro);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: var(--negro);
+    margin-top: 20px;
+    margin-bottom: 20px; /* Añade margen inferior para separar los títulos del contenido */
+}
+
+p {
+    font-size: 18px;
+    margin: 1vh 0; /* Aumenta el margen superior e inferior para mayor separación */
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 2vh; /* Aumenta el margen superior para mayor separación */
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: var(--verde-oscuro);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 8vh; /* Añade margen superior para separar el botón del formulario */
+}
+
+input[type="submit"]:hover {
+    background-color: var(--verde);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    p {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

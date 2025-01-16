@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Mis Solicitudes</title>
+    <link rel="stylesheet" href="./Styles/perfil_solicitudes.css">
 </head>
 <body>
     <h1>Mis Solicitudes</h1>
@@ -40,9 +41,10 @@
         echo "<p>Descripción: $descripcion</p>";
 
         // Botón para finalizar la solicitud
-        echo "<form action='./Controlador/finalizar_solicitud.php' method='POST'>
+        echo "<form action='./Controlador/finalizar_solicitud.php' method='POST' enctype='multipart/form-data'>
                 <input type='hidden' name='id_solicitud' value='$id_solicitud'>
-                <input type='submit' value='Finalizar Solicitud'>
+                <input type='hidden' name='categoria' value='$dispositivo'>
+                <input type='submit' value='Finalizar Solicitud' style='background-color: #cc0000; color: white;'>
               </form>";
 
         // Consulta SQL para obtener los mensajes agrupados por id_solicitud y id_donante

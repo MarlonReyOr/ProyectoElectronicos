@@ -1,0 +1,91 @@
+
+
+h1 {
+    color: #000000;
+    text-align: center;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    box-sizing: border-box;
+    text-align: left; /* Asegura que el texto dentro del formulario esté alineado a la izquierda */
+    margin-bottom: 10px; /* Añade un margen inferior para separar el formulario del texto */
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000000; /* Cambia el color de las letras a negro */
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #306B34;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #2ECC71;
+}
+
+p {
+    text-align: center;
+    margin-top: 0; /* Ajusta el margen superior para acercar el texto al formulario */
+}
+
+a {
+    color: #3498DB;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    form {
+        padding: 15px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Colores usados:
+#2ECC71 (Verde claro)
+#3498DB (Azul)
+#FFFFFF (Blanco)
+#ECF0F1 (Gris claro)
+#306B34 (Verde oscuro)
+#000000 (Negro)
+*/
