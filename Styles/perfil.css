@@ -1,4 +1,6 @@
 /* Colores */
+
+
 :root {
     --verde: #2ECC71;
     --azul: #3498DB;
@@ -49,9 +51,7 @@ nav ul li a.active {
 }
 
 div {
-    width: 80%;
     border-radius: 8px;
-
 }
 
 /* Estilos responsivos */

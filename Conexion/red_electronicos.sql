@@ -7,6 +7,10 @@
 -- Versión del servidor: 8.3.0
 -- Versión de PHP: 8.2.18
 
+CREATE DATABASE IF NOT EXISTS red_electronicos;
+USE red_electronicos;
+
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -37,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `mensaje` (
   PRIMARY KEY (`id_mensaje`),
   KEY `id_solicitud` (`id_solicitud`),
   KEY `id_donante` (`id_donante`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `mensaje`
@@ -60,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `reporte` (
   `fecha_reporte` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_reporte`),
   KEY `id_usuario_reportado` (`id_usuario_reportado`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -79,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `solicitud` (
   PRIMARY KEY (`id_solicitud`),
   KEY `id_usuario` (`id_usuario`),
   KEY `id_tipo_dispositivo` (`id_tipo_dispositivo`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `solicitud`
@@ -99,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `tipo_dispositivo` (
   `id_tipo` int NOT NULL AUTO_INCREMENT,
   `nombre` varchar(100) NOT NULL,
   PRIMARY KEY (`id_tipo`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_dispositivo`
@@ -150,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `bloqueado` tinyint(1) DEFAULT '0',
   PRIMARY KEY (`id_usuario`),
   UNIQUE KEY `correo` (`correo`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
